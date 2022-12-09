@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <%- include('./partials/head'); %>
+  <title>Home</title>
+</head>
+
+<body>
+  <div class="cover-container d-flex w-100 h-100 p-3 mx-auto flex-column">
+    <header class="masthead mb-auto">
+      <%- include('./partials/header'); %>
+    </header>
+
+    <main role="main" class="inner cover">
+      <h1 class="cover-heading">Wellcome to the evaluation target.</h1>
+      <p class="lead">This is just a mock webapp. It's served using <b>nodeJs</b> and <b>expressJs</b> utilizing
+        <b>ejs</b> for server-side page rendering.</p>
+
+      <% if(states.logged_in_as_user || states.logged_in_as_admin) { %>
+      <p class="lead">
+        <p class="lead">You are already logged in</p>
+        <a href="user" class="btn btn-lg btn-secondary">Go to user's page</a>
+      </p>
+      <%  } else {%>
+      
+      <p class="lead">
+        <a href="/views/login" class="btn btn-lg btn-secondary">Login</a>
+      </p>
+      <p class="lead">
+        <a href="/views/numbers" class="btn btn-lg btn-secondary">Chained links (parameter increment)</a>
+      </p>
+      <p class="lead">
+        <a href="/views/numbers/hardmode" class="btn btn-lg btn-secondary">Chained links (backend variable increment)</a>
+      </p>
+      <p class="lead">
+        <a href="/views/const-content/const-links/random-page" class="btn btn-lg btn-secondary">Constant Content Constant Links</a>
+      </p>
+      <!-- <p class="lead">
+        <a href="/views/const-content/dynamic-links/random-page" class="btn btn-lg btn-secondary">Constant Content Dynamic Links</a>
+      </p> -->
+      <p class="lead">
+        <a href="/views/dynamic-content/const-links/random-page" class="btn btn-lg btn-secondary">Dynamic Content Constant Links</a>
+      </p>
+      <!-- <p class="lead">
+        <a href="/views/dynamic-content/dynamic-links/random-page" class="btn btn-lg btn-secondary">Dynamic Content Dynamic Links</a>
+      </p> -->
+      <p class="lead">
+        <a href="/views/state" class="btn btn-lg btn-secondary">Artificial state machine</a>
+      </p>
+      <%  } %>
+
+    </main>
+
+    <footer class="mastfoot mt-auto">
+      <%- include('./partials/footer'); %>
+    </footer>
+  </div>
+
+  <%- include('./partials/scripts'); %>
+</body>
+
+</html>

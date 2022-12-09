@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <%- include('./partials/head'); %>
+  <link href="/rainbow_text.css" rel="stylesheet">
+</head>
+
+<body>
+  <div class="cover-container d-flex w-100 h-100 p-3 mx-auto flex-column">
+    <header class="masthead mb-auto">
+      <%- include('./partials/header'); %>
+    </header>
+    
+    <main role="main" class="inner cover">
+
+      <% if(states.logged_in_as_admin) {%>
+      <div class="text-center">
+        <p class="lead">
+          <h3>You are an admin</h3>
+          <a href="/views/admin" class="btn btn-lg btn-secondary">Go to admin's page</a>
+        </p>
+      </div>
+      <% } %>
+
+      <p class="lead">
+        <b>Hi <%= user %>,</b>
+      </p>
+
+      <p class="lead">
+        <i> "<%= quote['content'] %>"</i>
+      </p>
+      <p>
+        - <%= quote['author'] %>
+      </p>
+      <p class="lead">
+        <a href="/views/logout" class="btn btn-lg btn-secondary">Logout</a>
+      </p>
+    </main>
+
+
+    <footer class="mastfoot mt-auto">
+      <%- include('./partials/footer'); %>
+    </footer>
+  </div>
+
+  <%- include('./partials/scripts'); %>
+</body>
+
+</html>

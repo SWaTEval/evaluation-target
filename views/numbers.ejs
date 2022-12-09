@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <%- include('./partials/head'); %>
+  <title>Chained numbers</title>
+</head>
+
+<body>
+  <div class="cover-container d-flex w-100 h-100 p-3 mx-auto flex-column">
+    <header class="masthead mb-auto">
+      <%- include('./partials/header'); %>
+    </header>
+
+    <main role="main" class="inner cover">
+      <h1>Evil number: <%= current_number %></h1>
+
+      <% if(hardmode) { %>
+      <p class="lead">Now we are even hiding the url parameter. Instead the number is saved and incremented on the
+        server side.
+        This should trick the scanner to think that a state change has happened.</p>
+      <% } else { %>
+      <p class="lead">This pages aims to trick the scanner making it think that a new state is reached by providing a
+        new
+        link on the underlying button every time it gets clicked.</p>
+      <% } %>
+
+      <a href=<%= nav_location %> class="btn btn-lg btn-secondary">Pssst... over here... click this... 😈</a>
+
+    </main>
+
+    <footer class="mastfoot mt-auto">
+      <%- include('./partials/footer'); %>
+    </footer>
+  </div>
+
+  <%- include('./partials/scripts'); %>
+</body>
+
+</html>

@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <%- include('./partials/head'); %>
+  <title>Const content and Const links</title>
+</head>
+
+<body>
+  <div class="cover-container d-flex w-100 h-100 p-3 mx-auto flex-column">
+    <header class="masthead mb-auto">
+      <%- include('./partials/header'); %>
+    </header>
+
+    <main role="main" class="inner cover">
+      <p class="lead">
+        <h1>Const content and Const links</h1>
+        This page shows constant content and constant links.
+      </p>
+
+      <h3>Constant content</h3>
+      <p>
+        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut sem purus, laoreet sed metus eget, consectetur
+        fringilla libero. Ut at venenatis mauris. Suspendisse consectetur pharetra tincidunt. In hac habitasse platea
+        dictumst. Proin rhoncus ipsum enim, et feugiat justo ullamcorper vitae. Suspendisse pretium nisl purus. Nam a
+        orci
+        et ipsum gravida facilisis tincidunt at lacus. Pellentesque eu ornare nisi. Sed imperdiet urna quis dignissim
+        ornare. In non elit eleifend, hendrerit urna sed, scelerisque dui. Sed dictum metus ligula.
+      </p>
+
+      <h2>Constant links</h2>
+      <p>
+        The following links are arbitrary and are used only for content generation needed for the detection algorithms.
+
+        <% links.forEach(link => { %>
+        <div> <a href=<%=link.address%>><%=link.text%></a></div>
+        <% }); %>
+      </p>
+    </main>
+
+    <footer class="mastfoot mt-auto">
+      <%- include('./partials/footer'); %>
+    </footer>
+  </div>
+
+  <%- include('./partials/scripts'); %>
+</body>
+
+</html>

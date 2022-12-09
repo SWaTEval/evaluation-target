@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <%- include('./partials/head'); %>
+  <title>Login</title>
+</head>
+
+<body>
+  <div class="cover-container d-flex w-100 h-100 p-3 mx-auto flex-column">
+    <header class="masthead mb-auto">
+      <%- include('./partials/header'); %>
+    </header>
+
+    <main role="main" class="inner cover">
+
+      <form class="form-signin" style="max-width: 330px; margin: auto" action="login" method="get">
+        <h1 class="cover-heading">Please log in</h1>
+
+        <input type="text" id="username" name="username" class="form-control mt-3" placeholder="Username" required=""
+          autofocus="">
+        <input type="password" id="password" name="password" class="form-control mt-2" placeholder="Password"
+          required="">
+
+        <button class="btn btn-lg btn-secondary btn-block mt-5" type="submit">Log in</button>
+      </form>
+
+
+    </main>
+
+    <footer class="mastfoot mt-auto">
+      <%- include('./partials/footer'); %>
+    </footer>
+  </div>
+
+  <%- include('./partials/scripts'); %>
+</body>
+
+</html>

@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <%- include('./partials/head'); %>
+  <title>Deeper State Machine</title>
+</head>
+
+<body>
+  <div class="cover-container d-flex w-100 h-100 p-3 mx-auto flex-column">
+    <header class="masthead mb-auto">
+      <%- include('./partials/header'); %>
+    </header>
+
+    <h1 class="cover-heading text-center">You are in state: <a
+        href="/views/state?keyword=<%=state_identifier%>"><b><%=state_identifier%></b></a></h1>
+
+    <main role="main" class="inner cover">
+      <form class="form-signin" style="max-width: 300px; margin: auto" action="state" method="get">
+
+        <input type="text" id="keyword" name="keyword" class="form-control mt-3" placeholder="Keyword for next state"
+          required="" autofocus="">
+
+        <button class="btn btn-lg btn-secondary btn-block mt-2" type="submit">Submit</button>
+      </form>
+
+      <a href="/views/state/reset" class="btn btn-lg btn-outline-warning btn-block mt-2"
+        style="max-width: 300px; margin: auto">Reset state machine</a>
+
+    </main>
+
+    <footer class="mastfoot mt-auto">
+      <%- include('./partials/footer'); %>
+    </footer>
+  </div>
+
+  <%- include('./partials/scripts'); %>
+</body>
+
+</html>
