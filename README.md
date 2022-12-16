@@ -1,6 +1,6 @@
-# evaluation-framework
+# SWaTEval Evaluation Target
 
-An evaluation framework for the state aware crawler
+An evaluation target for the SWaTEval framework
 
 # Initial
 Run `npm install` to install packages
@@ -17,10 +17,10 @@ Run `node index.js` to start the application
     - Dynamic page content and:
         - [x] Constant links
         - [x] Dynamic links
+
     - Chained links
         - [x] Generation with input parameter (No state change in backend)
         - [x] Generation with button click incrementing a counter (State change in backend)
-
 
 - State machine
     - [x] Simple (2 States)
