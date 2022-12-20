@@ -2,10 +2,23 @@
 
 An evaluation target for the SWaTEval framework
 
-# Initial
-Run `npm install` to install packages
+# How to run
 
-Run `node index.js` to start the application
+1. Install [NodeJs](https://nodejs.org/en/)
+
+2. Install project depndencies using npm:
+
+```
+npm install
+```
+
+3. Run the application
+
+```
+node index.js
+```
+
+4. Access the application http://localhost:3000
 
 # Features
 
