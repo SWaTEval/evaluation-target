@@ -1,6 +1,10 @@
 # SWaTEval Evaluation Target
 
-An evaluation target for the SWaTEval framework
+An evaluation target for the SWaTEval framework.
+
+This repository has been published as a part of the following paper. Please consider citing this paper if you use our work in your research.
+
+> Borcherding, A.; Penkov, N.; Giraud, M. and Beyerer, J. (2023). SWaTEval: An Evaluation Framework for Stateful Web Application Testing. In Proceedings of the 9th International Conference on Information Systems Security and Privacy - ICISSP
 
 # How to run
 
